@@ -179,6 +179,8 @@ public class BatteryServiceFragment extends ServiceFragment {
     if (source != mBatteryLevelEditText) {
       mBatteryLevelEditText.setText(Integer.toString(newBatteryLevel));
     }
+
+    mDelegate.sendNotificationToDevices(mBatteryLevelCharacteristic);
   }
 
   @Override
